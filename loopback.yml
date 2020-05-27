@@ -10,15 +10,15 @@
         
         #int_id: "{{ item.number }}"
       #  name: "{{ item.name }}"
-        state: present
+       # state: present
       with_items:
         - { number: 1, name: "10" }
         - { number: 2, name: "20" }
         - { number: 3, name: "30" }
-   - name: Show interface
-      ios_command:
-        commands:
-          - show ip interface bri
-      register: show_interface
+  # - name: Show interface
+   #   ios_command:
+   #     commands:
+  #        - show ip interface bri
+  #    register: show_interface
       
-    - debug: var=show_interface.stdout_lines
+   # - debug: var=show_interface.stdout_lines
